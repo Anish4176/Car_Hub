@@ -34,3 +34,21 @@ export interface FilterProps {
     limit: number;
     model: string;
 }
+export interface FilterOptions {
+   title:string;
+   value:string;
+}
+export interface CustomFilterProps {
+    title: string;
+    setfilter:(value:any) => void;
+    options: FilterOptions[];
+}
+export interface ShowMoreProps{
+    pageNumber:number;
+    isNext:boolean;
+    setlimit:(value:number) => void;
+}
+export interface GoogleProviderProps {
+    clientId:string;
+    clientSecret:string;
+}

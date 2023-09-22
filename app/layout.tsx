@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import './globals.css'
 import type { Metadata } from 'next'
 import Footer from '@/components/Footer'
+import Provider from '@/components/Provider'
 
 
 
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='relative'>
+        <Provider>
         <Nav/>
         {children}
         <Footer/>
+        </Provider>
         </body>
     </html>
   )
